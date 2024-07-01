@@ -1,5 +1,7 @@
 FROM debian:latest
 
+ENV PIP_NO_CACHE_DIR 1
+FROM python:3.8.5-slim-buster
 RUN apt update && apt upgrade -y && \
     apt install --no-install-recommends -y \
     debian-keyring \
