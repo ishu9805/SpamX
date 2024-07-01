@@ -56,7 +56,7 @@ RUN apt update && apt upgrade -y && \
     && rm -rf /var/lib/apt/lists /var/cache/apt/archives /tmp
 
 # Pypi package Repo upgrade
-RUN pip3 install --upgrade pip setuptools
+
 COPY . /app
 WORKDIR /app
 RUN pip3 install -U -r requirements.txt
